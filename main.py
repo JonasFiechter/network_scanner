@@ -1,4 +1,4 @@
-from src.features.scanner.components.scanner import Scanner
+# from src.features.scanner.components.scanner import Scanner
 
 def run():
     print('start_function!')
