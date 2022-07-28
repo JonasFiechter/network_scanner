@@ -1,4 +1,4 @@
-#  This app should to be a simple and lightweight tool to print on screen all the online machines 
+#  This app should be a simple and lightweight tool to print on screen all the online machines 
 # inside your network
 
 # How to get the data from the system
