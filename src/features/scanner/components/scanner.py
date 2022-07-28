@@ -2,16 +2,17 @@
 # inside your network
 
 # How to get the data from the system
-from locale import locale_encoding_alias
-import sys 
 import subprocess
-from tkinter.tix import Tree
+import unicodedata
 
 command = ['ipconfig']
 
-#  Instance of subprocess object
-p = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)
-text = str(p.stdout.read())
-retcode = p.wait()
-
-print(text)
+class Scanner:
+    def __init__(self):
+        pass
+    
+    def get_str_from_cmd(self):
+        p = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)
+        text = str(p.stdout.read())
+        unicodedata.normalize(text, 'utf-8')
+        return text
